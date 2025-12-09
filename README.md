@@ -63,6 +63,58 @@ The program displays:
 - Process termination notifications
 - Total context switches
 
+## Example Output
+
+```
+═══════════════════════════════════════════════════════
+   TIME-SHARING SYSTEM SIMULATION
+═══════════════════════════════════════════════════════
+  Scheduler: Round-Robin
+  Time Quantum: 100 ms
+  Number of Processes: 5
+  Total Work per Process: 100000000 iterations
+═══════════════════════════════════════════════════════
+
+Creating worker processes...
+
+  [✓] Worker 1 created (PID=12345)
+  [✓] Worker 2 created (PID=12346)
+  [✓] Worker 3 created (PID=12347)
+  [✓] Worker 4 created (PID=12348)
+  [✓] Worker 5 created (PID=12349)
+
+═══════════════════════════════════════════════════════
+   STARTING SCHEDULER
+═══════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────┐
+│ Worker 1 Started (PID=12345)            │
+└─────────────────────────────────────────┘
+>> Context Switch: Running PID 12345
+
+┌─────────────────────────────────────────┐
+│ Worker 2 Started (PID=12346)            │
+└─────────────────────────────────────────┘
+>> Context Switch: Running PID 12346
+
+╭─ Worker 1 Status ──────────────────────╮
+│ Progress: [██░░░░░░░░░░░░░░░░░░]  10%  │
+│ Iteration: 10000000/100000000          │
+│ Remaining: 90%                         │
+╰────────────────────────────────────────╯
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ✓ Worker 3 FINISHED (PID=12347)       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+═══════════════════════════════════════════════════════
+   SIMULATION COMPLETE
+═══════════════════════════════════════════════════════
+  All 5 workers have finished their work.
+  Total Context Switches: 247
+═══════════════════════════════════════════════════════
+```
+
 ## Clean Up
 
 ```bash
