@@ -1,4 +1,4 @@
-#define _XOPEN_SOURCE=700
+#define _XOPEN_SOURCE 700
 #include "../include/timer.h"
 #include "../include/scheduler.h"
 #include <stdlib.h>
@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <sys/types.h>
+#include <signal.h>
 #include <string.h>
 
 static struct itimerval timer;
